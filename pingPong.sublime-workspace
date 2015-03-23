@@ -1,0 +1,738 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"house",
+				"house"
+			],
+			[
+				"ng-re",
+				"ng-repeat	AngularJS"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"margi",
+				"margin-top"
+			],
+			[
+				"marg",
+				"margin-bottom"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"font-",
+				"font-weight"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"notifi",
+				"notificationSync"
+			],
+			[
+				"total",
+				"totalPoints"
+			],
+			[
+				"newPoints",
+				"newPointsObject"
+			],
+			[
+				"newPo",
+				"newPointsObject"
+			],
+			[
+				"curr",
+				"currentHouse"
+			],
+			[
+				"$lo",
+				"$log	AngularJS"
+			],
+			[
+				"ng-cl",
+				"ng-click	AngularJS"
+			],
+			[
+				"simplesign",
+				"simplesign"
+			],
+			[
+				"con",
+				"controller	Angular.js"
+			],
+			[
+				"Ho",
+				"HomeCtrl"
+			],
+			[
+				"ope",
+				"openTimed"
+			],
+			[
+				"font-s",
+				"font-style"
+			],
+			[
+				"padding",
+				"padding-top"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"margin-",
+				"margin-left"
+			],
+			[
+				"padd",
+				"padding-top"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"ce",
+				"center-container"
+			],
+			[
+				"index",
+				"indexCounter"
+			],
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"templ",
+				"templatesRef"
+			],
+			[
+				"new",
+				"newEmail"
+			],
+			[
+				"ge",
+				"getCurrentUser"
+			],
+			[
+				"data",
+				"dataService"
+			],
+			[
+				"fir",
+				"firebase"
+			],
+			[
+				"send",
+				"sendTextMessage"
+			],
+			[
+				"party",
+				"partyServiceObject"
+			],
+			[
+				"fire",
+				"firebase"
+			],
+			[
+				"F",
+				"FBURL"
+			],
+			[
+				"Em",
+				"EmailService"
+			],
+			[
+				"MAIL_",
+				"MAIL_URI"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "\n<!DOCTYPE html>\n<html>\n<head>\n\n	<!-- CSS -->\n	<!-- load bootstrap (bootswatch version) -->\n	<link rel=\"stylesheet\" href=\"//netdna.bootstrapcdn.com/bootswatch/3.1.1/readable/bootstrap.min.css\">\n	<link rel=\"stylesheet\" href=\"style.css\">\n	<!-- JS -->\n	<!-- load angular, ngRoute, ngAnimate -->\n	<script src=\"http://code.angularjs.org/1.2.13/angular.js\"></script>\n	<script src=\"http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-route.js\"></script>\n	<script src=\"http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-animate.js\"></script>\n	<script src=\"app.js\"></script>\n\n</head>\n\n<!-- apply our angular app -->\n<body ng-app=\"animateApp\">\n\n    <!-- inject our views using ng-view -->\n	<!-- each angular controller applies a different class here -->\n	<div class=\"page {{ pageClass }}\" ng-view></div>\n		\n    <div id=\"about\">\n        <p>A demo on Angular Animations: ng-view</p>\n        <p>View the <a href=\"http://scotch.io/tutorials/javascript/animating-angularjs-apps-ngview\">Scotch.io Tutorial</a></p>\n    </div>\n		\n</body>\n</html>",
+			"file": "index.html",
+			"file_size": 0,
+			"file_write_time": 1427086127000000,
+			"settings":
+			{
+				"buffer_size": 1048,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "angular.module('pingPong', [])\n    .controller('mainCtrl', ['$scope', function ($scope) {\n\n        var\n            nameList = ['Pierre', 'Pol', 'Jacques', 'Robert', 'Elisa'],\n            familyName = ['Dupont', 'Germain', 'Delcourt', 'bjip', 'Menez'];\n\n        function createRandomItem() {\n            var\n                firstName = nameList[Math.floor(Math.random() * 4)],\n                lastName = familyName[Math.floor(Math.random() * 4)],\n                age = Math.floor(Math.random() * 100),\n                email = firstName + lastName + '@whatever.com',\n                balance = Math.random() * 3000;\n\n            return{\n                firstName: firstName,\n                lastName: lastName,\n                age: age,\n                email: email,\n                balance: balance\n            };\n        }\n\n\n        $scope.displayed = [];\n        for (var j = 0; j < 50; j++) {\n            $scope.displayed.push(createRandomItem());\n        }\n    }])\n    .directive('stRatio',function(){\n        return {\n          link:function(scope, element, attr){\n            var ratio=+(attr.stRatio);\n            \n            element.css('width',ratio+'%');\n            \n          }\n        };\n    });\n",
+			"file": "script.js",
+			"file_size": 0,
+			"file_write_time": 1427086132000000,
+			"settings":
+			{
+				"buffer_size": 1208,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "style.css",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 67.0,
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"angul",
+				"Snippet: Angular JS"
+			],
+			[
+				"boots",
+				"Snippet: Bootstrap CSS"
+			],
+			[
+				"cdn",
+				"Cdnjs: Search"
+			],
+			[
+				"set syntax: js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"snippet ",
+				"Snippet: html"
+			],
+			[
+				"set s",
+				"Set Syntax: HTML"
+			],
+			[
+				"html",
+				"HTML: Wrap Selection With Tag"
+			],
+			[
+				"angu",
+				"Snippet: Angular.js"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"cdnjs",
+				"Cdnjs: Search"
+			],
+			[
+				"cdn ",
+				"Cdnjs: Search"
+			],
+			[
+				"javas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"angula",
+				"Set Syntax: HTML (Angular.js)"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/Shared/Projects/house-cup-app/app/partials/index.html",
+		"/Users/Shared/Projects/house-cup-app/app/partials/admin.html",
+		"/Users/juan/Desktop/hello.c",
+		"/Users/juan/Downloads/pizza-planet-angularjs-master/js/controllers/MainController.js",
+		"/Users/juan/Documents/Projects/PointsMobile7css/PointsController8/www/css/style.css",
+		"/Users/juan/Documents/Projects/PointsMobile7css/PointsController8/www/index.html",
+		"/Users/juan/Downloads/pizza-planet-angularjs-master/js/app.js",
+		"/Users/juan/Documents/Projects/PointsMobile7css/PointsController8/www/js/app.js",
+		"/Users/juan/Documents/Projects/PointsMobile7css/PointsController8/www/lib/ionicons/css/ionicons.css",
+		"/Users/juan/Documents/Projects/PointsMobile7css/PointsController8/www/lib/ionicons/cheatsheet.html",
+		"/Users/juan/Downloads/Flat-UI-master 2/package.json",
+		"/Users/juan/Downloads/FullscreenForm/js/classie.js",
+		"/Users/juan/Downloads/CommonJS SelectFX.html",
+		"/Users/juan/Downloads/SimpleDropDownEffects/index4.html",
+		"/Users/juan/Downloads/FullscreenForm/js/fullscreenForm.js",
+		"/Users/juan/Downloads/FullscreenForm/index.html",
+		"/Users/juan/Downloads/counterDev/index.html",
+		"/Users/juan/Downloads/counterDev/style.css",
+		"/Users/juan/Downloads/counterDev/script.js",
+		"/Users/Shared/Projects/pointsmobile/www/js/controllers.js",
+		"/Users/juan/Documents/Projects/***animated_playground_MASTER_WORKS-AnimateCSS/toaster.js",
+		"/Users/juan/Documents/Projects/***animated_playground_MASTER_WORKS-AnimateCSS/animate.css",
+		"/Users/juan/Documents/Projects/***animated_playground_MASTER_WORKS-AnimateCSS/toaster.css",
+		"/Users/juan/Documents/Projects/***animated_playground_MASTER_WORKS-AnimateCSS/index.html",
+		"/Users/juan/Documents/Projects/***animated_playground_MASTER_WORKS-AnimateCSS/script.js",
+		"/Users/juan/Downloads/get-started-firebase 2/code/index.html",
+		"/Users/juan/Downloads/egghead-angularjs-from-scratch-getting-started-01-bootstrap/data/bookmarks.json",
+		"/Users/juan/Downloads/help.html",
+		"/Users/juan/Library/Caches/Cleanup At Startup/Transmit/EF543B65-D1F4-4FE8-950D-9D15E70A9E54/thefilmmakers.html",
+		"/Users/juan/Downloads/egghead-angularjs-from-scratch-getting-started-04-simple-states/app/eggly-app.start.js",
+		"/Users/juan/Downloads/egghead-angularjs-from-scratch-getting-started-01-bootstrap 2/index.start.html",
+		"/Users/juan/Documents/Projects/markie/app/index.html",
+		"/Users/juan/Documents/Projects/markie/app/scripts/app.js",
+		"/Users/juan/Documents/Projects/markie/app/scripts/config.js",
+		"/Users/Shared/Projects/house-cup-app/app/index.html",
+		"/Users/Shared/Projects/house-cup-app/app/index-async.html",
+		"/Users/juan/Documents/Projects/uploadedDev/thefilmmakers.html",
+		"/Users/juan/Documents/Projects/uploadedDev/index.html",
+		"/Users/juan/Documents/Projects/uploadedDev/shutupandunicorn/wp-content/plugins/woosidebars/index.php",
+		"/Users/juan/Downloads/Shield/Shield Theme/index.html",
+		"/Users/juan/Documents/Projects/uploadedDev/bower_components/flat-ui/less/variables.less",
+		"/Users/juan/Documents/Projects/uploadedDev/bower_components/flat-ui/dist/css/flat-ui.css",
+		"/Users/juan/Documents/Projects/uploadedDev/collegetour.html",
+		"/Users/juan/Documents/Projects/uploadedDev/css/main.css",
+		"/Users/juan/Documents/Projects/uploadedDev/js/main.js",
+		"/Users/juan/Documents/Projects/uploadedDev/default.html",
+		"/Users/juan/Downloads/test2/index.html",
+		"/Users/juan/Downloads/test2/untitled2.html",
+		"/Users/juan/Downloads/test/test2.html",
+		"/Users/juan/Downloads/test2/firebase.js",
+		"/Users/Shared/Projects/house-cup-app/app/partials/partials:state2.list.html",
+		"/Users/Shared/Projects/house-cup-app/app/partials/partials:state1.list.html",
+		"/Users/Shared/Projects/house-cup-app/app/partials/state2.html",
+		"/Users/Shared/Projects/house-cup-app/app/partials/state1.html",
+		"/Users/Shared/Projects/house-cup-app/app/js/config.js",
+		"/Users/Shared/Projects/house-cup-app/app/js/app.js",
+		"/Users/juan/Library/Application Support/Sublime Text 2/Packages/User/JavaScript.sublime-settings",
+		"/Users/juan/Downloads/angular-animate-css/index.html",
+		"/Users/juan/Downloads/animate/index.html",
+		"/Users/juan/Downloads/animate/style.css",
+		"/Users/juan/Downloads/animate/app.js",
+		"/Users/Shared/Projects/house-cup-app/app/bower_components/angular-route/angular-route.js",
+		"/Users/juan/Library/Application Support/Sublime Text 2/Packages/User/AngularJS-completions.sublime-settings",
+		"/Users/Shared/Projects/house-cup-app/app/bower_components/ngDialog/js/ngDialog.js",
+		"/Users/juan/Documents/Projects/MyChat1/ionic.project",
+		"/Users/juan/Documents/Projects/MyChat1/www/js/appnew.js",
+		"/Users/juan/Documents/Projects/MyChat/chatdata.json",
+		"/Users/juan/Documents/Projects/MyChat/www/templates/signup.html",
+		"/Users/juan/Documents/Projects/MyChat/www/templates/tab-rooms.html",
+		"/Users/juan/Documents/Projects/MyChat/platforms/ios/www/js/controllers.js",
+		"/Users/juan/Documents/Projects/MyChat/platforms/ios/build/device/MyChat.app/www/js/controllers.js",
+		"/Users/juan/Documents/Projects/MyChat/platforms/ios/build/emulator/MyChat.app/www/templates/signup.html",
+		"/Users/juan/Documents/Projects/MyChat/platforms/ios/build/emulator/MyChat.app/www/js/controllers.js",
+		"/Users/juan/Documents/Projects/MyChat/platforms/ios/build/device/MyChat.app/www/templates/signup.html",
+		"/Users/juan/Documents/Projects/MyChat/platforms/ios/www/templates/signup.html",
+		"/Users/juan/Documents/Projects/MyChat/www/js/appnew.js",
+		"/Users/juan/Documents/Projects/MyChat/www/templates/tab-chat.html",
+		"/Users/juan/Documents/Projects/MyChat/platforms/ios/build/emulator/MyChat.app/www/templates/tab-chat.html",
+		"/Users/juan/Documents/Projects/MyChat/platforms/ios/www/templates/tab-chat.html",
+		"/Users/juan/Documents/Projects/MyChat/www/js2/services.js",
+		"/Users/juan/Documents/Projects/MyChat/package.json",
+		"/Users/juan/Documents/Projects/MyChat/www/lib/ionic/js/ionic.bundle.js",
+		"/Users/juan/Documents/Projects/MyChat/www/lib/ionic/js/ionic-angular.js",
+		"/Users/Shared/Projects/house-cup-app/app/js/services.js",
+		"/Users/Shared/Projects/house-cup-app/app/partials/scoreboard.html",
+		"/Users/Shared/Projects/house-cup-app/app/js/controllers.js",
+		"/Users/Shared/Projects/house-cup-app/firebase.json",
+		"/Users/juan/Documents/Projects/Joseliz Web/index.html",
+		"/Users/Shared/Projects/house-cup-app/app/css/styles.css",
+		"/Users/Shared/Projects/house-cup-app/app/css/app.css",
+		"/Users/juan/Downloads/5050/css/styles.css",
+		"/Users/juan/Dropbox/houseCupApp/app/index.html",
+		"/Users/juan/Dropbox/houseCupApp/app/js/changeEmail.js",
+		"/Users/juan/Dropbox/houseCupApp/app/js/app.js",
+		"/Users/juan/Dropbox/houseCupApp/app/js/controllers.js",
+		"/Users/juan/Dropbox/webdevExperiments/demoApp/www/js/app.js",
+		"/Users/juan/Dropbox/webdevExperiments/demoApp/www/js/ionic.swipecards.js",
+		"/Users/juan/Downloads/tt.html",
+		"/Users/juan/Downloads/ionic-ion-swipe-cards-master/example/www/index.html",
+		"/Users/juan/Downloads/ionic-ion-swipe-cards-master/README.md",
+		"/Users/juan/Dropbox/webdevExperiments/demoApp/www/css/style.css",
+		"/Users/juan/Dropbox/webdevExperiments/demoApp/www/index.html",
+		"/Users/juan/Downloads/ionic-firebase-master/www/js/app.js",
+		"/Users/juan/Downloads/ionic-firebase-master/README.md",
+		"/Users/juan/Dropbox/webdevExperiments/RouteParams/partials/list.html",
+		"/Users/juan/Downloads/OneDrive-2015-02-13/Style,data,Violin/data.json",
+		"/Users/juan/Dropbox/webdevExperiments/routeParamsApp/js/data.json",
+		"/Users/juan/Dropbox/webdevExperiments/routeParamsApp/index.html",
+		"/Users/juan/Dropbox/webdevExperiments/routeParamsApp/partials/details.html",
+		"/Users/juan/Dropbox/webdevExperiments/routeParamsApp/partials/list.html",
+		"/Users/juan/Dropbox/webdevExperiments/routeParamsApp/js/app.js",
+		"/Users/juan/Dropbox/webdevExperiments/routeParamsApp/js/controllers.js",
+		"/Users/juan/Downloads/Style,data,Violin/styles.css",
+		"/Users/juan/Dropbox/webdevExperiments/routeParamsApp/lib/Angular/angular-route.min.js",
+		"/Users/juan/Documents/Projects/experiments/external_api_sample_app/templates/start_page.hdbs",
+		"/Users/juan/Documents/Projects/experiments/external_api_sample_app/app.js",
+		"/Users/juan/Downloads/alfred-workflow-1.11.1/workflow/web.py",
+		"/Users/juan/Dropbox/opsordersmail/app/index.html",
+		"/Users/juan/Documents/Projects/opsordersmail/app/js/controllers.js",
+		"/Users/juan/Documents/Projects/opsordersmail/app/index.html",
+		"/Users/juan/Documents/Projects/opsordersmail/app/js/services.js",
+		"/Users/juan/Documents/Projects/opsordersmail/app/js/app.js",
+		"/Users/juan/Documents/Projects/opsordersmail/app/partials/emails.html",
+		"/Users/juan/Downloads/ui-select-master 2/dist/select.css",
+		"/Users/juan/Downloads/ui-select-master 2/dist/select.js",
+		"/Users/juan/Documents/Projects/opsordersTEST1 safe/app/js/controllers.js",
+		"/Users/juan/Documents/Projects/opsordersTEST1/angularcourseST.sublime-workspace",
+		"/Users/juan/Documents/Projects/angularcourse/app/js/services.js"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"/Users/juan/Documents/Projects/uploadedDev/bower_components",
+			"/Users/Shared/Projects/house-cup-app/app",
+			"/Users/juan/Documents/Projects/MyChat",
+			"/Users/Shared/Projects/house-cup-app",
+			"/Users/juan/Dropbox/webdevExperiments/demoApp/www"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"list",
+			"item",
+			"order",
+			"orders",
+			"house",
+			"review",
+			"buttonHouse",
+			"\">",
+			"on\" ng-c",
+			"g-c",
+			"button\" ng-",
+			"Category",
+			"category",
+			"Category",
+			"set",
+			"list",
+			">+",
+			"\">",
+			">+",
+			"input",
+			"counter-button\"",
+			"    <link href=\"lib/ionic/css/ionic.css\" rel=\"stylesheet\">\n    ",
+			"button-large",
+			"\"button",
+			"<div class=\"button-bar",
+			"</button>",
+			"btn-default\"",
+			"rst",
+			"class=\"btn-group\"",
+			"group",
+			"language",
+			"Language",
+			"language",
+			"firstshow",
+			"house",
+			"newPointsObject",
+			"obj",
+			"Array",
+			"list",
+			"item",
+			"playlists",
+			"class=\"btn btn-default\"",
+			"    <script src=\"https://cdn.firebase.com/libs/angularfire/0.9.2/angularfire.min.js\"></script>\n",
+			"newP",
+			"};\n",
+			"'';\n",
+			"}    ",
+			"timeout",
+			"sample-show-hide",
+			" <div class=\"check-element sample-show-hide\" ng-show=\"checked\" style=\"clear:both;\">\n    Visible...\n  </div>",
+			"success",
+			"flipy",
+			"kane",
+			"divsh",
+			"vhx",
+			"component-f",
+			"font",
+			"@font",
+			"@",
+			"class=\"img",
+			"class=\"img-",
+			"class",
+			" width=\"45%",
+			" col-sm-6",
+			"green-sea",
+			"link-color",
+			"less",
+			"href=",
+			"bootst",
+			"<a href=\"images",
+			"<a href=\"images/render-2.jpg\" target=\"_blank\"><img src=\"img/images/award2.png\" width=\"45%\">\n                </a>",
+			"60p",
+			"centered",
+			"assets/",
+			"blog",
+			"nav",
+			"Melly",
+			"melly",
+			"Ki",
+			"Paul",
+			"lee",
+			"ann",
+			" width=\"45%\" ",
+			"col-sm-4",
+			"text",
+			"message",
+			"watch j",
+			"routeProvider",
+			"\"./",
+			"flipY",
+			"styles",
+			"style",
+			"/css/",
+			"js",
+			".js",
+			"js",
+			"displayname",
+			"displayName",
+			"displayname",
+			"displayName",
+			"displayname",
+			"displayName",
+			"https://chatexperiment1654.firebaseio.com/rooms/-Jj4ncc8kshHVbd46FnF",
+			"});\n",
+			"Rooms",
+			"roomName",
+			"please select",
+			"https://chatexperiment1654.firebaseio.com",
+			"'https://chatexperiment1654.firebaseio.com'",
+			"firebaseUrl",
+			"https://chatexperiment1654.firebaseio.com",
+			"firebaseUrl",
+			"mychat",
+			"starter",
+			"enplughousecup",
+			"alt=\"\"",
+			"col-md-3",
+			"col-md-4",
+			"assets/img",
+			".png",
+			"font-s",
+			"color",
+			"height",
+			"{\n",
+			"height",
+			"heig",
+			"order-form",
+			"houseCupApp"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"Melly Lee",
+			"Melly",
+			"displayName",
+			"nouns",
+			"word",
+			"WordsCtrl"
+		],
+		"reverse": false,
+		"show_context": false,
+		"use_buffer2": false,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"settings":
+					{
+						"buffer_size": 1048,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								235,
+								235
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "script.js",
+					"settings":
+					{
+						"buffer_size": 1208,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								28,
+								28
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "style.css",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 546.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": false,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 189.0,
+	"status_bar_visible": false
+}
