@@ -1,24 +1,39 @@
-
 <!DOCTYPE html>
 <html>
+
 <head>
-
-	<!-- CSS -->
-	<!-- load bootstrap (bootswatch version) -->
-	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/3.1.1/readable/bootstrap.min.css">
-	<link rel="stylesheet" href="style.css">
-	<!-- JS -->
-	<!-- load angular, ngRoute, ngAnimate -->
-	<script src="http://code.angularjs.org/1.2.13/angular.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-route.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-animate.js"></script>
-	<script src="app.js"></script>
-
+    <!-- CSS -->
+    <!-- load bootstrap (bootswatch version) -->
+    <!-- <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/3.1.1/readable/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="style.css">
+    <!-- JS -->
+    <!-- load angular, ngRoute, ngAnimate -->
+    <script src="https://code.angularjs.org/1.2.13/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-animate.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.2.2/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/1.0.0/angularfire.min.js"></script>
+    <script src="app.js"></script>
 </head>
-
 <!-- apply our angular app -->
-<body ng-app="pingPong">
 
+<body ng-app="pingPong" ng-controller="mainCtrl">
+    <h1 style="font-size: 4em">Ping Pong Scorekeeper</h1>
+    <!-- <p class="subhead">Focus on kicking ass, not keeping score.</p> -->
+    <div class="flex-container ">
+        <div class="flex-item player-{{player.isCurrentServer}}" ng-repeat="player in players" ng-click="addNewPoint(player)">
+            <h2 class="playerName playerName-{{player.isCurrentServer}}">{{player.name}}</h2>
+            <!-- <img src="img/server.png" id="serverImage"> -->
+            <p class="scoreInt">{{player.score}}</p>
+        </div>
+    </div>
+    <div class="container" id="toast-container" ng-click="newGame()">
+        <div class="check-element -show-hide notification-div" ng-class="notifications.name" ng-hide="matchInSession" style="clear:both;">
+            <p class="text-center">{{mostRecentVictory.player}} wins! Tap for a new game.</p>
+        </div>
+    </div>
+    <!-- 
+<div>
    <div>
      <h2>Score</h2>
     <div ng-controller="mainCtrl"> <span>Total score is {{combinedScore}}</span>
@@ -28,10 +43,10 @@
             </li>
         </ul>
         <span ng-hide="matchInSession">Game over!</span>
-        <button ng-hide="matchInSession" ng-click="newGame()">New Game</button>
 
     </div> 
 </div>
-		
+	 -->
 </body>
+
 </html>

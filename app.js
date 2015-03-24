@@ -1,30 +1,32 @@
-angular.module('pingPong', [])
-    .controller('mainCtrl', ['$scope', function($scope) {
+angular.module('pingPong', ['firebase'])
+    .controller('mainCtrl', ['$scope', '$firebase', '$window', '$timeout', '$http', '$firebaseArray', '$firebaseObject', function($scope, $firebase, $window, $timeout, $http, $firebaseArray, $firebaseObject) {
+        var players = new Firebase("https://pingpongscore.firebaseio.com/players");
+        var players = $firebaseObject(players);
 
-        $scope.players = [{
-            name: 'Player A',
-            isCurrentServer: true,
-            score: 0
-        }, {
-            name: 'Player B',
-            isCurrentServer: false,
-            score: 0
-        }];
+        // For three-way data bindings, bind it to the scope instead
+        players.$bindTo($scope, "players");
+        $scope.players = players;
+
         $scope.matchInSession = true;
+        $scope.mostRecentVictory = {
+            player: 'Player A'
+        }
         $scope.addNewPoint = function(player) {
             if (player.score >= 20) {
                 // player.score++;
                 player.score = 21;
+                player.isWinner = true;
+                $scope.mostRecentVictory.player = player.name;
                 $scope.gameOver();
+
             } else if ($scope.matchInSession === true) {
                 player.score++;
                 $scope.combinedScore++;
                 if ($scope.combinedScore % 5 === 0) {
-                    if($scope.players[0].isCurrentServer === true) {
+                    if ($scope.players[0].isCurrentServer === true) {
                         $scope.players[0].isCurrentServer = false;
                         $scope.players[1].isCurrentServer = true;
-                    }
-                    else {
+                    } else {
                         $scope.players[0].isCurrentServer = true;
                         $scope.players[1].isCurrentServer = false;
                     }
@@ -33,6 +35,8 @@ angular.module('pingPong', [])
         };
         $scope.gameOver = function() {
             $scope.matchInSession = false;
+
+
         };
         $scope.newGame = function() {
             $scope.players = [{
