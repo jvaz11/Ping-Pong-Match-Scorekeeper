@@ -1,0 +1,20 @@
+{
+    "match": {
+        "matchInSession": false,
+        "mostRecentVictor": "Player A",
+        "awaitingPlayers": true,
+        "combinedScore": 0,
+        "players": [
+            {
+                "name": "Player A",
+                "isCurrentServer": true,
+                "score": 0
+            },
+            {
+                "name": "Player B",
+                "isCurrentServer": false,
+                "score": 0
+            }
+        ]
+    }
+}

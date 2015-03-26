@@ -1,0 +1,212 @@
+body {
+    padding: 20px;
+    font-family: sans-serif;
+    background: #465669;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 2em;
+}
+
+.subhead {
+    text-align: center;
+    color: white;
+    font-size: 2em;
+}
+
+.flex-container {
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: column nowrap;
+    -webkit-justify-content: space-around;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    background: #465669;
+    align-items: center;
+}
+
+.flex-item {
+    width: 500px;
+    height: 500px;
+    /*styling*/
+    
+    background: #1d242c;
+    text-align: center;
+    line-height: 60px;
+    color: #fff;
+    font-size: 3em;
+    font-weight: bold;
+    margin-top: 5%;
+}
+
+.scoreInt {
+    font-size: 5em;
+    margin-top: 35%;
+}
+
+img {}
+
+.player-true {
+    -webkit-box-shadow: rgb(19, 184, 113) 0px 0px 162px 0px;
+}
+
+.playerName-true::before {
+    content: url(img/server2.png);
+    margin-left: -35px;
+}
+/*toast styles*/
+
+.notification-div {
+    background-color: #9117b9;
+    -webkit-box-shadow: rgb(235, 161, 23) 0px 0px 162px 0px;
+    box-shadow: rgb(235, 161, 23) 0px 0px 162px 0px;
+    /*background-color: rgb(81, 163, 81);*/
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    display: block;
+    font-family: 'PT Sans Caption', sans-serif;
+    font-size: 18px;
+    + height: 336px;
+    + line-height: 25.7142868041992px;
+    margin-bottom: 0px;
+    + margin-left: 52.15625px;
+    + margin-right: 52.15625px;
+    margin-top: 0px;
+    padding-bottom: 15px;
+    padding-left: 50px;
+    padding-right: 15px;
+    padding-top: 15px;
+    top: 45%;
+}
+
+.notification-div p {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    font-family: 'PT Sans Caption', sans-serif;
+    font-size: 5em;
+    font-weight: bold;
+    height: 256px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    word-wrap: break-word;
+    z-index: 36;
+    text-align: center;
+}
+/*awaiting players CTA*/
+.notification-div-awaiting {
+    background-color: #D2F6F5;
+    /*-webkit-box-shadow: rgb(235, 161, 23) 0px 0px 162px 0px;*/
+    /*box-shadow: rgb(235, 161, 23) 0px 0px 162px 0px;*/
+    /*background-color: rgb(81, 163, 81);*/
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    box-sizing: border-box;
+    color: rgb(24, 86, 95);
+    display: block;
+    font-family: sans-serif;
+    font-size: 18px;
+    + height: 336px;
+    + line-height: 25.7142868041992px;
+    margin-bottom: 0px;
+    + margin-left: 52.15625px;
+    + margin-right: 52.15625px;
+    margin-top: 0px;
+    padding-bottom: 15px;
+    padding-left: 50px;
+    padding-right: 15px;
+    padding-top: 15px;
+    top: 75%;
+}
+
+/*awaiting players CTA*/
+.notification-div-awaiting p {
+  box-sizing: border-box;
+  cursor: pointer;
+  display: block;
+  font-family: sans-serif;
+  font-size: 4em;
+  height: 50%;
+  margin-bottom: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
+  word-wrap: break-word;
+  z-index: 36;
+}
+
+.-show-hide {
+    -webkit-animation: fadeInRight 0.5s;
+    animation: fadeInRight 0.5s;
+    -webkit-animation: rotateIn 1s;
+    animation: rotateIn 1s;
+}
+
+.-show-hide.ng-hide {
+    -webkit-animation: rotateOut 1s;
+    animation: rotateOut 1s;
+    display: block !important;
+    opacity: 0
+}
+
+.awaitingPlayersCTA {
+  top: 85%;
+    -webkit-animation: fadeInRight 1.5s;
+    animation: fadeInRight 1.5s;
+    -webkit-animation: fadeInUp 3s;
+    animation: zoomInDown 3s;
+}
+
+.awaitingPlayersCTA.ng-hide {
+    -webkit-animation: zoomOutUp 1s;
+    animation: zoomOutUp 1s;
+    display: block !important;
+    opacity: 0
+}
+
+.option {  
+    -webkit-animation-duration: 3s;  
+    -webkit-animation-delay: 2s;  
+    -webkit-animation-iteration-count: infinite;  
+}  
+
+#toast-container {
+    z-index: 999999;
+    width: 95%;
+    position: fixed;
+    top: 1%;
+    /*overrides*/
+}
+
+
+#toast-container-awaiting {
+    z-index: 999999;
+    width: 95%;
+    position: fixed;
+    top: 30%;
+    /*overrides*/
+}
+
+.text-center {
+  text-align: center;
+}
+
+.ftr {
+    text-align: center;
+    top: 85%;
+    color: white;
+    font-size: .5em;
+}
