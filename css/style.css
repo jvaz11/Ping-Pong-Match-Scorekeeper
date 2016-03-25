@@ -4,10 +4,13 @@ body {
     background: #465669;
 }
 
-h1 {
+.headline1 {
+    font-size: 7em;
     text-align: center;
+    font-weight: bold;
     color: white;
-    font-size: 2em;
+    -webkit-text-shadow: rgb(51, 205, 123) 0px 0px 162px 0px;
+    text-shadow: rgb(51, 205, 123) 0px 0px 162px 0px;
 }
 
 .subhead {
@@ -64,62 +67,64 @@ img {}
 /*toast styles*/
 
 .notification-div {
-    background-color: #9117b9;
-    -webkit-box-shadow: rgb(235, 161, 23) 0px 0px 162px 0px;
-    box-shadow: rgb(235, 161, 23) 0px 0px 162px 0px;
+    background-color: #33CD7B;
+    /*-webkit-box-shadow: rgb(235, 161, 23) 0px 0px 162px 0px;*/
+    /*box-shadow: rgb(235, 161, 23) 0px 0px 162px 0px;*/
     /*background-color: rgb(81, 163, 81);*/
+    
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
     box-sizing: border-box;
-    color: rgb(255, 255, 255);
+    color: #FFFFFF;
     display: block;
-    font-family: 'PT Sans Caption', sans-serif;
-    font-size: 18px;
+    font-family: sans-serif;
+    font-size: 1em;
     + height: 336px;
     + line-height: 25.7142868041992px;
     margin-bottom: 0px;
     + margin-left: 52.15625px;
     + margin-right: 52.15625px;
     margin-top: 0px;
-    padding-bottom: 15px;
+    padding-bottom: 100px;
     padding-left: 50px;
     padding-right: 15px;
     padding-top: 15px;
-    top: 45%;
+    top: 75%;
 }
+/*awaiting players CTA*/
 
 .notification-div p {
     box-sizing: border-box;
     cursor: pointer;
     display: block;
-    font-family: 'PT Sans Caption', sans-serif;
-    font-size: 5em;
-    font-weight: bold;
-    height: 256px;
+    font-family: sans-serif;
+    font-size: 4em;
+    height: 50%;
     margin-bottom: 10px;
     margin-left: 0px;
     margin-right: 0px;
     word-wrap: break-word;
     z-index: 36;
-    text-align: center;
 }
 /*awaiting players CTA*/
+
 .notification-div-awaiting {
-    background-color: #D2F6F5;
+    background-color: #FE464D;
     /*-webkit-box-shadow: rgb(235, 161, 23) 0px 0px 162px 0px;*/
     /*box-shadow: rgb(235, 161, 23) 0px 0px 162px 0px;*/
     /*background-color: rgb(81, 163, 81);*/
+    
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
     box-sizing: border-box;
-    color: rgb(24, 86, 95);
+    color: #FFFFFF;
     display: block;
     font-family: sans-serif;
-    font-size: 18px;
+    font-size: 1em;
     + height: 336px;
     + line-height: 25.7142868041992px;
     margin-bottom: 0px;
@@ -132,38 +137,37 @@ img {}
     padding-top: 15px;
     top: 75%;
 }
-
 /*awaiting players CTA*/
+
 .notification-div-awaiting p {
-  box-sizing: border-box;
-  cursor: pointer;
-  display: block;
-  font-family: sans-serif;
-  font-size: 4em;
-  height: 50%;
-  margin-bottom: 10px;
-  margin-left: 0px;
-  margin-right: 0px;
-  word-wrap: break-word;
-  z-index: 36;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    font-family: sans-serif;
+    font-size: 4em;
+    height: 50%;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    word-wrap: break-word;
+    z-index: 36;
 }
 
 .-show-hide {
-    -webkit-animation: fadeInRight 0.5s;
-    animation: fadeInRight 0.5s;
-    -webkit-animation: rotateIn 1s;
-    animation: rotateIn 1s;
+    top: 85%;
+    -webkit-animation: zoomInDown 1s;
+    animation: zoomInDown 1s;
 }
 
 .-show-hide.ng-hide {
-    -webkit-animation: rotateOut 1s;
-    animation: rotateOut 1s;
+    -webkit-animation: zoomOutDown 1s;
+    animation: zoomOutDown 1s;
     display: block !important;
     opacity: 0
 }
 
 .awaitingPlayersCTA {
-  top: 85%;
+    top: 85%;
     -webkit-animation: fadeInRight 1.5s;
     animation: fadeInRight 1.5s;
     -webkit-animation: fadeInUp 3s;
@@ -177,36 +181,50 @@ img {}
     opacity: 0
 }
 
-.option {  
-    -webkit-animation-duration: 3s;  
-    -webkit-animation-delay: 2s;  
-    -webkit-animation-iteration-count: infinite;  
-}  
+.option {
+    -webkit-animation-duration: 3s;
+    -webkit-animation-delay: 2s;
+    -webkit-animation-iteration-count: infinite;
+}
 
 #toast-container {
     z-index: 999999;
     width: 95%;
     position: fixed;
-    top: 1%;
+    top: 45%;
     /*overrides*/
 }
 
-
 #toast-container-awaiting {
-    z-index: 999999;
-    width: 95%;
-    position: fixed;
-    top: 30%;
-    /*overrides*/
+      z-index: 999999;
+  width: 95%;
+  position: fixed;
+  top: 19%;
+/*overrides*/
 }
 
 .text-center {
-  text-align: center;
+    text-align: center;
 }
 
-.ftr {
-    text-align: center;
-    top: 85%;
-    color: white;
-    font-size: .5em;
+.new-game-button {
+    color: #33CD7B
 }
+
+.recapdiv {
+    -webkit-animation-duration: 3s;
+    -webkit-animation-delay: 1s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+/*
+@media screen and (max-width: 600px) {
+  #hide-mobile {
+    visibility: hidden;
+    clear: both;
+    float: left;
+    margin: 10px auto 5px 20px;
+    width: 28%;
+    display: none;
+  }
+}*/

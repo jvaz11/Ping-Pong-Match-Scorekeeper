@@ -17,16 +17,15 @@
     <script src="https://cdn.firebase.com/libs/angularfire/1.0.0/angularfire.min.js"></script>
     <script src="app.js"></script>
     <meta name="viewport" content="user-scalable=no" />
-
     <meta name="apple-mobile-web-app-capable" content="yes">
 </head>
 <!-- apply our angular app -->
 
 <body ng-app="pingPong" ng-controller="mainCtrl">
-    <h1 style="font-size: 6em" class="rubberBand animated">Ping Pong Scorekeeper</h1>
+    <p class="rubberBand animated headline1">Ping Pong Scorekeeper</p>
     <!-- <p class="subhead">Focus on kicking ass, not keeping score.</p> -->
     <div class="flex-container {{player.animClass}}">
-        <div class="flex-item player-{{player.isCurrentServer}}" ng-repeat="player in match.players" ng-click="addNewPoint(player)">
+        <div class="flex-item player-{{player.isCurrentServer}}" ng-repeat="player in match.players" ng-click="addNewPoint(player)" ng-class="{tada: player.isWinner, animated: player.isWinner}">
             <h2 class="playerName playerName-{{player.isCurrentServer}}">{{player.name}}</h2>
             <!-- <img src="img/server.png" id="serverImage"> -->
             <p class="scoreInt">{{player.score}}</p>
@@ -34,16 +33,25 @@
     </div>
     <div class="container" id="toast-container">
         <div class="check-element -show-hide notification-div" ng-class="notifications.name" ng-if="match.showRecap" style="clear:both;">
-            <p class="text-center">{{match.mostRecentVictor}} wins!</p>
+            <p style="font-size: 12em; font-weight: bold" class="text-center tada animated recapdiv">{{match.mostRecentVictor}} wins!<br></p>
         </div>
     </div>
-    <div class="container option pulse animated" id="toast-container-awaiting" ng-click="newGame()">
+    <div class="new-game-button" ng-click="newGame()" style="text-align: center; 
+    margin-top: 10%;    
+    color: #FE464D;
+    font-size: 6em;">New Game</div>
+    <div class="container option pulse animated" id="toast-container-awaiting">
         <div class="check-element awaitingPlayersCTA notification-div-awaiting" ng-class="notifications.name" ng-if="match.awaitingPlayers" style="clear:both;">
-            <p class="text-center">To play, go to bit.ly/pongscore and <strong>TAP</strong> here</p>
-            <p class="text-center">First server is always Player A. Tap your square each time you score!<p>
+            <p style="font-size: 3em" class="text-center">Go to <strong>bit.ly/pongscore</strong> to play!</p>
+                <p>
+                    <ul style="font-size: 2em">
+                        <li>The player who serves first is Player A</li>
+                        <li>When a player scores, tap their box to give them a point</li>
+                        <li>Tap New Game to reset the game</li>
+                    </ul>
         </div>
     </div>
-<!-- 
+    <!-- 
      <div class="ftr">Feel free to share any bugs or feature requests with Juan :)</div></body> -->
 
 </html>

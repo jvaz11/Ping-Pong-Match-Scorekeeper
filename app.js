@@ -50,11 +50,11 @@ angular.module('pingPong', ['firebase', 'ngTouch'])
         // Show the victor for five seconds before inviting new players to start a match        
         $scope.gameOver = function() {
             $scope.match.matchInSession = false;
-            if($scope.match.awaitingPlayers === false){
-            $scope.match.showRecap = true;
-        }
+            if ($scope.match.awaitingPlayers === false) {
+                $scope.match.showRecap = true;
+            }
             $timeout(function() {
-                            $scope.match.matchInSession === false;
+                $scope.match.matchInSession === false;
 
                 $scope.match.showRecap = false;
 
@@ -63,8 +63,8 @@ angular.module('pingPong', ['firebase', 'ngTouch'])
         };
     }]);
 
-        // Main goal for v2: refactor controller logic into services+factories d to allow instances of matches to be created, recorded and recalled. 
+// Main goal for v2: refactor controller logic into services+factories d to allow instances of matches to be created, recorded and recalled. 
 
-        // Possible cool features for future versions: in-office leaderboard, winning streaks, memory of past
-        // matches between two players (ie: it could teasingly remind a player how often they've lost against 
-        // a certain player, and likewise congratulate frequent champions on their skills
+// Possible cool features for future versions: in-office leaderboard, winning streaks, memory of past
+// matches between two players (ie: it could teasingly remind a player how often they've lost against 
+// a certain player, and likewise congratulate frequent champions on their skills
